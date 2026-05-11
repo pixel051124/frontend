@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --blue-primary: #5b7fe8;
+  --blue-mid: #7b9ef5;
+  --text-dark: #1e3a68; /* Biru gelap untuk teks menu */
+  --text-muted: #888;
+  --white: #ffffff;
+  --bg-app: #7b9ef5; /* Warna biru disesuaikan agar lebih soft seperti Figma */
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* ── Shell ── */
+.da-shell {
+  width: 375px;
+  min-height: 780px;
+  background-color: #7b9ef5 !important;
+  background-image: none !important;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 8px #1a1a1a,
+    0 0 0 10px #333;
+  font-family: var(--font-body);
+}
+
+/* ── Header ── */
+.da-header {
+  background: transparent;
+  padding: 24px 24px 32px; /* Padding disesuaikan */
+  position: relative;
+}
+
+/* Efek lengkungan (::before) DIHAPUS agar background flat sesuai desain asli */
+
+/* ── Search Bar ── */
+.da-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px; /* Jarak ke teks sapaan dijauhkan sedikit */
+}
+
+.da-search-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.da-search-icon {
+  position: absolute;
+  left: 16px; top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  pointer-events: none;
+}
+
+.da-search-input {
+  width: 100%;
+  background: #ffffff; /* Putih solid */
+  border: none;
+  border-radius: 24px; /* Dibuat lebih oval/pill shape */
+  padding: 12px 16px 12px 42px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #444;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  box-sizing: border-box;
+}
+
+.da-search-input::placeholder { color: #aaa; }
+
+/* Avatar / Profil disesuaikan jadi putih polos */
+.da-avatar-btn {
+  width: 44px; height: 44px;
+  min-width: 44px; min-height: 44px;
+  background: #ffffff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: opacity 0.2s;
+}
+
+.da-avatar-btn:hover { opacity: 0.8; }
+
+.da-avatar-btn img {
+  opacity: 0.6; /* Icon abu-abu di dalam avatar putih */
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Greeting ── */
+.da-greeting {
+  text-align: left; /* Teks Sapaan Rata Kiri */
+}
+
+.da-greeting h1 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.3px;
+  margin: 0 0 4px 0;
+}
+
+.da-greeting p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  margin: 0;
+}
+
+/* ── Content ── */
+.da-content {
+  padding: 0 24px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Jarak antar card */
+}
+
+/* ── 2-Column Grid ── */
+.da-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* ── Menu Card ── */
+.da-menu-card {
+  background: white;
+  border-radius: 16px; /* Sedikit lebih kotak (tidak terlalu bulat) */
+  padding: 32px 12px 24px; /* Ruang atas dibesarkan agar icon lega */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px; /* Jarak icon ke teks diperlebar */
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: all 0.2s ease;
+  width: 100%;
+  animation: fadeUp 0.5s ease both;
+}
+
+.da-menu-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(91,127,232,0.12);
+}
+
+.da-menu-card:active { transform: translateY(0); }
+
+.da-menu-icon {
+  object-fit: contain;
+}
+
+.da-menu-label {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* ── Animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Shell ── */
+.ll-shell {
+  width: 375px;
+  height: 780px;
+  background: linear-gradient(160deg, #5b7fe8 0%, #7b9ef5 100%);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 8px #1a1a1a,
+    0 0 0 10px #333;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.ll-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  position: relative;
+}
+
+.ll-back-btn {
+  position: absolute;
+  left: 20px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.ll-back-btn:hover { background: rgba(255,255,255,0.3); }
+
+.ll-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+/* ── Content ── */
+.ll-content {
+  flex: 1;
+  padding: 8px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.ll-content::-webkit-scrollbar { width: 0; }
+
+/* ── Card ── */
+.ll-card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  animation: fadeUp 0.4s ease both;
+}
+
+.ll-card:nth-child(1) { animation-delay: 0.05s; }
+.ll-card:nth-child(2) { animation-delay: 0.10s; }
+.ll-card:nth-child(3) { animation-delay: 0.15s; }
+
+/* ── Row ── */
+.ll-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  font-size: 13px;
+  color: #1a1a2e;
+}
+
+.ll-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a2e;
+  min-width: 62px;
+  flex-shrink: 0;
+}
+
+.ll-sep {
+  flex-shrink: 0;
+  color: #1a1a2e;
+}
+
+.ll-value {
+  font-size: 13px;
+  color: #1a1a2e;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* ── Button ── */
+.ll-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.ll-btn-kirim {
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 32px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(229,57,53,0.3);
+}
+
+.ll-btn-kirim:hover {
+  background: #c62828;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(229,57,53,0.4);
+}
+
+.ll-btn-kirim:active { transform: translateY(0); }
+
+/* ── Animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ll-status {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.ll-status.wait {
+  color: #f39c12;
+}
+
+.ll-status.proses {
+  color: #3498db;
+}
+
+.ll-status.selesai {
+  color: #2ecc71;
+}

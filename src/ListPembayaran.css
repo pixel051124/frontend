@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* ── Shell ── */
+.lpb-shell {
+  width: 375px;
+  min-height: 780px;
+  background: linear-gradient(160deg, #5b7fe8 0%, #7b9ef5 100%);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 8px #1a1a1a,
+    0 0 0 10px #333;
+  font-family: 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.lpb-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px;
+  position: relative;
+}
+
+.lpb-back-btn {
+  position: absolute;
+  left: 20px;
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lpb-back-btn:hover { background: rgba(255,255,255,0.3); }
+
+.lpb-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+/* ── Content ── */
+.lpb-content {
+  flex: 1;
+  padding: 8px 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  overflow-y: auto;
+}
+
+.lpb-content::-webkit-scrollbar { width: 0; }
+
+/* ── Card ── */
+.lpb-card {
+  background: white;
+  border-radius: 18px;
+  padding: 18px 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  animation: fadeUp 0.4s ease both;
+}
+
+.lpb-card:nth-child(1) { animation-delay: 0.05s; }
+.lpb-card:nth-child(2) { animation-delay: 0.10s; }
+.lpb-card:nth-child(3) { animation-delay: 0.15s; }
+.lpb-card:nth-child(4) { animation-delay: 0.20s; }
+
+/* ── Row ── */
+.lpb-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 13px;
+  color: #1a1a2e;
+}
+
+.lpb-label {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  width: 55px;
+  flex-shrink: 0;
+}
+
+.lpb-sep {
+  width: 20px;
+  flex-shrink: 0;
+  color: #1a1a2e;
+}
+
+.lpb-value {
+  font-size: 13px;
+  color: #1a1a2e;
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.lpb-status-pending { color: #f5a623; font-weight: 600; }
+.lpb-status-lunas   { color: #4caf50; font-weight: 600; }
+
+/* ── Bukti Row (value + tombol) ── */
+.lpb-bukti-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.lpb-bukti-value {
+  font-size: 13px;
+  color: #1a1a2e;
+  font-weight: 500;
+  flex: 1;
+}
+
+/* ── Approve Button ── */
+.lpb-btn-approve {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(76,175,80,0.3);
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.lpb-btn-approve:hover {
+  background: #43a047;
+  transform: translateY(-1px);
+}
+
+.lpb-btn-approve:active { transform: translateY(0); }
+
+.lpb-approved-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #4caf50;
+}
+
+/* ── Animation ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+.lpb-filename.clickable {
+  color: #4a6ed4;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  gap: 6px;
+}
+
+.lpb-filename.clickable:hover {
+  text-decoration: underline;
+}
+
+.lpb-bukti-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  align-items: flex-start; 
+}
+
+.lpb-bukti-top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  width: 100%; 
+}
+
+.lpb-bukti-bottom {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.lpb-bukti-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 8px;
+}
+
+.lpb-bukti-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 6px;
+}

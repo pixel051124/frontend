@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --blue-primary: #5b7fe8;
+  --blue-mid: #7b9ef5;
+  --green: #56e060;
+  --text-dark: #1e3a68;
+  --text-muted: #8e95a3;
+  --white: #ffffff;
+  --bg-app: #f5f6fa;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* ── Shell ── */
+.lt-shell {
+  width: 375px;
+  height: 780px;
+  background: linear-gradient(160deg, #6c90f5 0%, #83a5f6 100%);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 8px #1a1a1a,
+    0 0 0 10px #333;
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.lt-header {
+  padding: 22px 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.lt-back-btn {
+  width: 32px;
+  height: 32px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  padding: 0;
+}
+
+.lt-header h2 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+}
+
+/* ── Content ── */
+.lt-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 6px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* 🔥 lebih rapat */
+}
+
+.lt-content::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ── Card ── */
+.lt-card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px 14px; /* 🔥 lebih kecil */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 🔥 lebih rapat */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+/* ── Avatar ── */
+.lt-avatar {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  background: #e6edfc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lt-avatar img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.9;
+}
+
+/* ── Info ── */
+.lt-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* 🔥 super rapat */
+  align-items: flex-start;
+}
+
+.lt-nama {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.lt-telp,
+.lt-alamat {
+  font-size: 10.5px;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* ── Status ── */
+.lt-status {
+  border: none;
+  border-radius: 18px;
+  padding: 5px 14px;
+  font-family: var(--font-display);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.lt-status-aktif {
+  background: var(--green);
+  color: white;
+}
+
+.lt-status-offline {
+  background: #999;
+  color: white;
+}

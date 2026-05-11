@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --blue-primary: #5b7fe8;
+  --blue-mid: #7b9ef5;
+  --text-dark: #1a1a2e;
+  --text-muted: #888;
+  --white: #ffffff;
+  --bg-app: #f5f6fa;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+.dp-shell {
+  width: 375px;
+  min-height: 780px;
+  background: var(--bg-app);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 8px #1a1a1a,
+    0 0 0 10px #333;
+  font-family: var(--font-body);
+}
+
+/* ── Header ── */
+.dp-header {
+  background: linear-gradient(160deg, #5b7fe8 0%, #7b9ef5 60%, #8faff7 100%);
+  padding: 16px 20px 36px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dp-header::before {
+  content: '';
+  position: absolute;
+  width: 200px; height: 200px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+  top: -60px; right: -40px;
+  pointer-events: none;
+}
+
+/* ── Search Bar ── */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.search-wrapper { flex: 1; position: relative; }
+
+.search-icon {
+  position: absolute;
+  left: 12px; top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  border: none;
+  border-radius: 14px;
+  padding: 11px 16px 11px 38px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #444;
+  outline: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+.search-input::placeholder { color: #aaa; }
+
+.avatar-btn {
+  width: 40px; height: 40px;
+  min-width: 40px; min-height: 40px;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.avatar-btn:hover { background: rgba(255,255,255,0.3); }
+
+/* ── Greeting ── */
+.dp-greeting { position: relative; z-index: 2; }
+
+.dp-greeting h1 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.3px;
+  margin-bottom: 2px;
+}
+
+.dp-greeting p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+}
+
+/* ── Content ── */
+.dp-content {
+  padding: 0 16px 24px;
+  margin-top: -18px;
+  position: relative;
+  z-index: 3;
+}
+
+/* ── Paket Card ── */
+.dp-paket-card {
+  background: white;
+  border-radius: 20px;
+  padding: 16px 18px;
+  box-shadow: 0 8px 24px rgba(91,127,232,0.1), 0 2px 8px rgba(0,0,0,0.04);
+  margin-bottom: 24px;
+  border: 1px solid rgba(91,127,232,0.08);
+  animation: fadeUp 0.5s 0.1s ease both;
+}
+
+.dp-paket-label {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.dp-divider {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin-bottom: 12px;
+}
+
+.dp-paket-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dp-paket-nama {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.dp-paket-mbps {
+  color: var(--blue-primary);
+  font-weight: 700;
+}
+
+.dp-paket-detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #777;
+  font-weight: 500;
+}
+
+.dp-divider-dot { color: #ddd; }
+
+/* ── Tombol Sedang Diproses ── */
+.btn-proses {
+  background: var(--blue-primary);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: default;
+  opacity: 0.85;
+  white-space: nowrap;
+}
+
+/* ── Section Title ── */
+.dp-section-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 14px;
+  letter-spacing: -0.3px;
+  animation: fadeUp 0.5s 0.2s ease both;
+}
+
+/* ── Quick Grid ── */
+.dp-quick-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ── Menu Card ── */
+.menu-card {
+  background: white;
+  border-radius: 18px;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(91,127,232,0.14);
+}
+
+.menu-card span {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.menu-icon {
+  width: 52px; height: 52px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-upgrade-paket {
+  background: linear-gradient(135deg, #eef2ff, #dde6ff);
+}
+
+.icon-laporan {
+  background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+}
+
+/* ── Tagihan Card ── */
+.dp-tagihan-card {
+  grid-column: 1 / -1;
+  background: white;
+  border-radius: 18px;
+  padding: 16px 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.04);
+  animation: fadeUp 0.5s 0.35s ease both;
+}
+
+.dp-tagihan-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dp-tagihan-label {
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.dp-arrow {
+  font-size: 14px;
+  color: #aaa;
+}
+
+.dp-tagihan-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dp-tagihan-nominal {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+/* ── Tombol Bayar Sekarang ── */
+.btn-bayar {
+  background: #4a6ed4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 16px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;  
+  opacity: 1;        
+  transition: 0.2s ease;
+}
+
+/* ── Animations ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

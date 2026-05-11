@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --blue-primary: #3b5bdb;
+  --blue-mid: #4c6ef5;
+  --text-dark: #1a1a2e;
+  --text-muted: #aaa;
+  --white: #ffffff;
+  --bg-app: #f0f4ff;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+/* ── Shell ── */
+.login-shell {
+  width: 375px;
+  height: 780px;
+  background: var(--bg-app);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 8px #1a1a1a,
+    0 0 0 10px #333;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+/* ── Card ── */
+.login-card {
+  background: white;
+  border-radius: 20px;
+  padding: 36px 28px 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 8px 32px rgba(59,91,219,0.1);
+  animation: fadeUp 0.4s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Logo ── */
+.login-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 4px;
+}
+
+/* ── Title ── */
+.login-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+/* ── Input Wrapper ── */
+.login-input-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f7ff;
+  border: 1.5px solid #e8ecff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  transition: border 0.2s;
+  box-sizing: border-box;
+}
+
+.login-input-wrapper:focus-within {
+  border-color: var(--blue-primary);
+}
+
+.login-input-icon {
+  flex-shrink: 0;
+  opacity: 0.5;
+}
+
+/* ── Input ── */
+.login-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #444;
+  outline: none;
+}
+
+.login-input::placeholder { color: #bbb; }
+
+/* ── Tombol ── */
+.login-btn {
+  width: 100%;
+  background: var(--blue-primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 14px rgba(59,91,219,0.35);
+  transition: all 0.2s;
+  margin-top: 4px;
+}
+
+.login-btn:hover {
+  background: #2f4cc4;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(59,91,219,0.45);
+}
+
+.login-btn:active { transform: translateY(0); }
+
+/* ── Footer Link ── */
+.login-footer {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.login-link {
+  color: var(--blue-primary);
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error-box {
+  background: #ffe5e5;
+  border: 1px solid #ff4d4d;
+  color: #b30000;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.login-link:hover { color: #2f4cc4; }

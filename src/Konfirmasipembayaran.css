@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --blue-primary: #5b7fe8;
+  --blue-mid: #7b9ef5;
+  --text-dark: #1a1a2e;
+  --text-muted: #aaa;
+  --white: #ffffff;
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+.kp-shell {
+  width: 375px;
+  height: 780px;
+  background: linear-gradient(160deg, #5b7fe8 0%, #7b9ef5 100%);
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.25),
+    0 0 0 8px #1a1a1a,
+    0 0 0 10px #333;
+  font-family: var(--font-body);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+.kp-header {
+  padding: 28px 20px 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.kp-header h2 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.3px;
+}
+
+/* ── Content ── */
+.kp-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px 40px;
+}
+
+/* ── Card ── */
+.kp-card {
+  background: white;
+  border-radius: 24px;
+  padding: 40px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  width: 100%;
+  animation: popIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Check Circle ── */
+.kp-check-circle {
+  width: 80px;
+  height: 80px;
+  background: #4caf50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  box-shadow: 0 6px 20px rgba(76,175,80,0.35);
+  animation: bounceIn 0.5s 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes bounceIn {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Teks ── */
+.kp-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 800;
+  color: #2d3a8c;
+}
+
+.kp-time {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: -6px;
+}
+
+.kp-desc {
+  font-size: 13px;
+  color: #888;
+  line-height: 1.6;
+  padding: 0 8px;
+  margin-top: 4px;
+}
+
+/* ── Tombol Kembali ── */
+.kp-btn-kembali {
+  width: 100%;
+  background: linear-gradient(135deg, #4a6ed4, var(--blue-primary));
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 15px;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  box-shadow: 0 6px 20px rgba(91,127,232,0.4);
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.kp-btn-kembali:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(91,127,232,0.5);
+}
+
+.kp-btn-kembali:active { transform: translateY(0); }
