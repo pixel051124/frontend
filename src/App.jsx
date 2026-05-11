@@ -5,7 +5,7 @@ import SignIn from "./Signin";
 import CustomerDashboard from "./CustomerDashboard";
 import Pendaftaran from "./Pendaftaran";
 import Laporan from "./Laporan";
-import KonfirmasiData from "./KonfirmasiData";
+import KonfirmasiData from "./Konfirmasidata";
 import DashboardPending from "./DashboardPending";
 import KonfirmasiProses from "./Konfirmasiproses";
 import DashboardAdmin from "./Dashboardadmin";
