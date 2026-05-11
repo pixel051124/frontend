@@ -21,37 +21,33 @@ export default function Login({ onLogin, onGoSignIn }) {
 
   const handleLogin = async () => {
     setError("");
-
     if (!form.username) return setError("Username wajib diisi!");
     if (!form.password) return setError("Password wajib diisi!");
 
     try {
       setLoading(true);
-
       const res = await fetch("https://backend-appv2-production.up.railway.app/api/login", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
 
       const data = await res.json();
-      console.log("LOGIN RESPONSE:", data);
-      console.log(data.user);
+      
       if (!res.ok) {
         setError(data.message || "Username atau password salah!");
         return;
       }
 
-      console.log("LOGIN RESPONSE:", data);
-      // simpan user ke localStorage
-      localStorage.setItem("user", JSON.stringify(data.user));
-
-      // kirim ke App.jsx
-      onLogin(data);
+      if(data.user) {
+        localStorage.setItem("user", JSON.stringify(data.user));
+        onLogin(data);
+      } else {
+        setError("Data user tidak ditemukan!");
+      }
 
     } catch (err) {
+      console.error("Fetch Error:", err);
       setError("Tidak bisa terhubung ke server!");
     } finally {
       setLoading(false);
