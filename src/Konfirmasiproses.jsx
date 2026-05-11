@@ -1,4 +1,4 @@
-import "./KonfirmasiProses.css";
+import "./Konfirmasiproses.css";
 import iconWarning from "./assets/icon-laporan.png";
 
 export default function KonfirmasiProses({ onKembali }) {

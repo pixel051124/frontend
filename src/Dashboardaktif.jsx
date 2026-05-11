@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./DashboardAktif.css";
+import "./Dashboardaktif.css";
 
 import iconAvatar from "./assets/icon-avatar.png";
 import iconUpgrade from "./assets/icon-upgrade.png";

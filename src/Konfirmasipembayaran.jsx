@@ -1,4 +1,4 @@
-import "./KonfirmasiPembayaran.css";
+import "./Konfirmasipembayaran.css";
 
 export default function KonfirmasiPembayaran({ onKembali, paket = { nama: "FiberX", mbps: 50 } }) {
   const now = new Date();

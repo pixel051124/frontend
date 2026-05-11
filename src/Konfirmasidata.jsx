@@ -1,4 +1,4 @@
-import "./KonfirmasiData.css";
+import "./Konfirmasidata.css";
 
 export default function KonfirmasiData({ onKembali }) {
   const now = new Date();

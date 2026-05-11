@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./ListPelanggan.css";
+import "./Listpelanggan.css";
 import iconLeft from "./assets/left.png";
 
 export default function ListPelanggan({ onBack }) {
