@@ -1,14 +1,14 @@
 import { useState } from "react";
 import SplashScreen from "./SplashScreen";
 import Login from "./Login";
-import SignIn from "./SignIn";
+import SignIn from "./Signin";
 import CustomerDashboard from "./CustomerDashboard";
 import Pendaftaran from "./Pendaftaran";
 import Laporan from "./Laporan";
 import KonfirmasiData from "./KonfirmasiData";
 import DashboardPending from "./DashboardPending";
 import KonfirmasiProses from "./KonfirmasiProses";
-import DashboardAdmin from "./DashboardAdmin";
+import DashboardAdmin from "./Dashboardadmin";
 import ListPelanggan from "./ListPelanggan";
 import DashboardAktif from "./DashboardAktif";
 import Pembayaran from "./Pembayaran";
