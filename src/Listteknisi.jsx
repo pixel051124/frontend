@@ -7,7 +7,7 @@ export default function ListTeknisi({ onBack }) {
   const [teknisi, setTeknisi] = useState([]);
 
 useEffect(() => {
-  fetch("backend-appv2-production.up.railway.app/api/teknisi")
+  fetch("https://backend-appv2-production.up.railway.app/api/teknisi")
     .then(res => res.json())
     .then(data => {
       console.log("DATA TEKNISI:", data); 

@@ -27,7 +27,7 @@ export default function Laporan({ onBack, onKirim }) {
   formData.append("foto", foto);
 
   try {
-    const res = await fetch("backend-appv2-production.up.railway.app/api/laporan", {
+    const res = await fetch("https://backend-appv2-production.up.railway.app/api/laporan", {
       method: "POST",
       body: formData,
     });

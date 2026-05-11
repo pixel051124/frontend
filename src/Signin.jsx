@@ -21,7 +21,7 @@ export default function SignIn({ onGoLogin }) {
     if (password !== confirmPassword) return setError("Password tidak cocok!");
 
     try {
-      const response = await fetch("backend-appv2-production.up.railway.app/api/register", {
+      const response = await fetch("https://backend-appv2-production.up.railway.app/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

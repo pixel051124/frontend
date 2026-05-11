@@ -30,7 +30,7 @@ formData.append("nama", user?.name || "");
   formData.append("status", "pending");
 
   try {
-    const res = await fetch("backend-appv2-production.up.railway.app/api/pembayaran", {
+    const res = await fetch("https://backend-appv2-production.up.railway.app/api/pembayaran", {
       method: "POST",
       body: formData,
     });

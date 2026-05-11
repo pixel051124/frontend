@@ -7,7 +7,7 @@ export default function TugasTeknisi({ onBack, onViewFoto }) {
   const [tugas, setTugas] = useState([]);
 
 useEffect(() => {
-  fetch("backend-appv2-production.up.railway.app/api/laporan")
+  fetch("https://backend-appv2-production.up.railway.app/api/laporan")
     .then(res => res.json())
     .then(data => {
       // ambil yang sudah dikirim ke teknisi
@@ -36,7 +36,7 @@ const handleStatus = (id, currentStatus) => {
   else if (currentStatus === "diproses") nextStatus = "selesai";
   else return;
 
-  fetch(`backend-appv2-production.up.railway.app/api/laporan/${id}/update-status`, {
+  fetch(`https://backend-appv2-production.up.railway.app/api/laporan/${id}/update-status`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

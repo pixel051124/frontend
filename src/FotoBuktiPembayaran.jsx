@@ -12,7 +12,7 @@ export default function FotoBuktiPembayaran({ onKembali, data }) {
         
         <div className="fbp-image-placeholder">
           <img
-            src={`backend-appv2-production.up.railway.app/storage/${data?.bukti}`}
+            src={`https://backend-appv2-production.up.railway.app/storage/${data?.bukti}`}
             alt="Bukti Pembayaran"
             style={{
               width: "100%",

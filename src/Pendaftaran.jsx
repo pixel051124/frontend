@@ -18,7 +18,7 @@ export default function Pendaftaran({ onBack, onKirim, isUpgrade }) {
 
   // ── GET DATA PAKET ─────────────────────────────
   useEffect(() => {
-    fetch("backend-appv2-production.up.railway.app/api/paket")
+    fetch("https://backend-appv2-production.up.railway.app/api/paket")
       .then((res) => res.json())
       .then((data) => setPaketList(data))
       .catch((err) => console.error("Error ambil paket:", err));
@@ -42,7 +42,7 @@ export default function Pendaftaran({ onBack, onKirim, isUpgrade }) {
     }
 
     try {
-      const res = await fetch("backend-appv2-production.up.railway.app/api/pendaftaran", {
+      const res = await fetch("https://backend-appv2-production.up.railway.app/api/pendaftaran", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

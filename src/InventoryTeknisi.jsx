@@ -17,7 +17,7 @@ export default function InventoryTeknisi({ onBack }) {
   const [items, setItems] = useState([]);
   
   useEffect(() => {
-    fetch("backend-appv2-production.up.railway.app/api/inventory")
+    fetch("https://backend-appv2-production.up.railway.app/api/inventory")
       .then(res => res.json())
       .then(data => setItems(data))
       .catch(err => console.log(err));
@@ -43,7 +43,7 @@ const handleUpdate = () => {
   formData.append("id", selectedItem);
   formData.append("jumlah", jumlah);
 
-  fetch("backend-appv2-production.up.railway.app/api/inventory/update-stok", {
+  fetch("https://backend-appv2-production.up.railway.app/api/inventory/update-stok", {
     method: "POST",
     body: formData,
   })
@@ -56,7 +56,7 @@ const handleUpdate = () => {
         return;
       }
 
-      fetch("backend-appv2-production.up.railway.app/api/inventory")
+      fetch("https://backend-appv2-production.up.railway.app/api/inventory")
         .then(res => res.json())
         .then(data => setItems(data));
     })
