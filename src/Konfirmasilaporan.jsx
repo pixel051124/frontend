@@ -1,4 +1,4 @@
-import "./KonfirmasiLaporan.css";
+import "./Konfirmasilaporan.css";
 
 export default function KonfirmasiLaporan({ onKembali }) {
   const now = new Date();

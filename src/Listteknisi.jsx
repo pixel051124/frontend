@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./ListTeknisi.css";
+import "./Listteknisi.css";
 import iconLeft from "./assets/left.png";
 import iconUser from "./assets/icon.png";
 
