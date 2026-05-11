@@ -7,7 +7,7 @@ export default function ListPelanggan({ onBack }) {
 
   // ambil data dari backend
   useEffect(() => {
-    fetch("http://192.168.1.3:8000/api/pendaftaran")
+    fetch("backend-appv2-production.up.railway.app/api/pendaftaran")
       .then((res) => res.json())
       .then((data) => {
         setPelanggan(data);
@@ -18,7 +18,7 @@ export default function ListPelanggan({ onBack }) {
   // approve 
   const handleApprove = async (id) => {
   try {
-    const res = await fetch(`http://192.168.1.3:8000/api/pendaftaran/${id}/approve`, {
+    const res = await fetch(`backend-appv2-production.up.railway.app/api/pendaftaran/${id}/approve`, {
       method: "PUT",
     });
 

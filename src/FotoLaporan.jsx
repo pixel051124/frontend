@@ -12,7 +12,7 @@ export default function FotoLaporan({ onKembali, data }) {
         <div className="fl-image-placeholder">
   {data?.foto ? (
     <img
-      src={`http://192.168.1.3:8000/storage/${data.foto}`}
+      src={`backend-appv2-production.up.railway.app/storage/${data.foto}`}
       alt="foto laporan"
       style={{
         width: "100%",

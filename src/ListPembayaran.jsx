@@ -70,7 +70,7 @@ export default function ListPembayaran({ onBack, onViewBukti }) {
 
   // GET DATA DARI BACKEND
   useEffect(() => {
-    fetch("http://192.168.1.3:8000/api/pembayaran")
+    fetch("backend-appv2-production.up.railway.app/api/pembayaran")
       .then(res => res.json())
       .then(data => setItems(data))
       .catch(err => console.log(err));
@@ -78,7 +78,7 @@ export default function ListPembayaran({ onBack, onViewBukti }) {
 
   // APPROVE PEMBAYARAN
   const handleApprove = async (id) => {
-    await fetch(`http://192.168.1.3:8000/api/pembayaran/${id}`, {
+    await fetch(`backend-appv2-production.up.railway.app/api/pembayaran/${id}`, {
       method: "PUT",
     });
 

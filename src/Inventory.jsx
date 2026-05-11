@@ -56,7 +56,7 @@ export default function Inventory({ onBack }) {
 
   // GET DATA
   useEffect(() => {
-    fetch("http://192.168.1.3:8000/api/inventory")
+    fetch("backend-appv2-production.up.railway.app/api/inventory")
       .then(res => res.json())
       .then(data => {
         setItems(data.map(i => ({ ...i, perubahan: 0 })));
@@ -80,7 +80,7 @@ export default function Inventory({ onBack }) {
       if (item.perubahan > 0) {
         const newStok = item.stok + item.perubahan;
 
-        fetch(`http://192.168.1.3:8000/api/inventory/${item.id}`, {
+        fetch(`backend-appv2-production.up.railway.app/api/inventory/${item.id}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ stok: newStok })
@@ -106,7 +106,7 @@ export default function Inventory({ onBack }) {
       return;
     }
 
-    fetch("http://192.168.1.3:8000/api/inventory", {
+    fetch("backend-appv2-production.up.railway.app/api/inventory", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -128,7 +128,7 @@ export default function Inventory({ onBack }) {
 
   const handleDelete = async (id) => {
   try {
-    await fetch(`http://192.168.1.3:8000/api/inventory/${id}`, {
+    await fetch(`backend-appv2-production.up.railway.app/api/inventory/${id}`, {
       method: "DELETE",
     });
 

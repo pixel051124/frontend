@@ -78,14 +78,14 @@ export default function ListLaporan({ onBack, onViewFoto }) {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("http://192.168.1.3:8000/api/laporan")
+    fetch("backend-appv2-production.up.railway.app/api/laporan")
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.log(err));
   }, []);
 
   const handleKirimTeknisi = (item) => {
-    fetch(`http://192.168.1.3:8000/api/laporan/${item.id}/kirim`, {
+    fetch(`backend-appv2-production.up.railway.app/api/laporan/${item.id}/kirim`, {
       method: "PUT",
     })
       .then((res) => res.json())

@@ -80,7 +80,7 @@ export default function App() {
   };
 
   const handleLogout = () => {
-  fetch("http://192.168.1.3:8000/api/logout", {
+  fetch("backend-appv2-production.up.railway.app/api/logout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -28,7 +28,7 @@ export default function Login({ onLogin, onGoSignIn }) {
     try {
       setLoading(true);
 
-      const res = await fetch("http://192.168.1.3:8000/api/login", {
+      const res = await fetch("backend-appv2-production.up.railway.app/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
