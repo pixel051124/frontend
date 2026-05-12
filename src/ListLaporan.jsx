@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // ── CARD ─────────────────────────────────────────
 function LaporanCard({ item, onKirimTeknisi, onViewFoto }) {
   return (
-    <div>
+    <div className="da-container">
       <div className="ll-row">
         <span className="ll-label">Nama</span>
         <span className="ll-sep">:</span>
@@ -40,10 +40,10 @@ function LaporanCard({ item, onKirimTeknisi, onViewFoto }) {
         <span className="ll-value">{item.deskripsi}</span>
       </div>
 
-      {/* 🔥 ACTION / STATUS */}
+
       <div className="ll-btn-wrapper">
 
-        {/* kalau masih pending */}
+
         {item.status === "pending" && (
           <button
             className="ll-btn-kirim"
@@ -53,7 +53,7 @@ function LaporanCard({ item, onKirimTeknisi, onViewFoto }) {
           </button>
         )}
 
-        {/* kalau sudah dikirim / proses / selesai */}
+
         {item.status !== "pending" && (
           <span
             className={`ll-status 
