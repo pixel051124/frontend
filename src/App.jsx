@@ -338,7 +338,6 @@ export default function App() {
   );
 }
 
-// STYLEz
 const styles = {
   container: {
     display: "flex",
