@@ -52,7 +52,7 @@ export default function SignIn({ onGoLogin }) {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <div className="login-card">
 
         <img src={logoConnecta} alt="Connecta" className="login-logo" />

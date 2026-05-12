@@ -55,7 +55,7 @@ export default function Login({ onLogin, onGoSignIn }) {
   };
 
   return (
-    <div>
+    <div className="login-container">
       <div className="login-card">
 
         {/* Logo */}
