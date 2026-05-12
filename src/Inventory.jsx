@@ -145,7 +145,7 @@ export default function Inventory({ onBack }) {
   );
 
   return (
-    <div className="inv-shell">
+    <div>
 
       {/* HEADER */}
       <div className="inv-header">

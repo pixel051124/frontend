@@ -17,7 +17,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="lt-shell">
+    <div>
       {/* Header */}
       <div className="lt-header">
         <button className="lt-back-btn" onClick={onBack}>

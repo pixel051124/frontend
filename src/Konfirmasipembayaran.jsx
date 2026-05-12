@@ -12,7 +12,7 @@ export default function KonfirmasiPembayaran({ onKembali, paket = { nama: "Fiber
   });
 
   return (
-    <div className="kp-shell">
+    <div>
       {/* Header */}
       <div className="kp-header">
         <h2>Pembayaran</h2>

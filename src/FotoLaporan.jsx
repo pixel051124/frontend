@@ -3,7 +3,7 @@ import "./FotoLaporan.css";
 
 export default function FotoLaporan({ onKembali, data }) {
   return (
-    <div className="fl-shell">
+    <div>
       <h2 className="fl-page-title">Foto</h2>
       
       <div className="fl-card">

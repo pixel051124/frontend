@@ -69,7 +69,7 @@ const handleStatus = (id, currentStatus) => {
 };
 
 return (
-    <div className="tt-shell">
+    <div>
       {/* Header tetap sama */}
       <div className="tt-header">
         <div className="tt-header-top">

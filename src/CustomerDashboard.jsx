@@ -102,7 +102,7 @@ export default function CustomerDashboard({ onPilihPaket, onLaporan }) {
   };
 
   return (
-    <div className="phone-shell">
+    <div>
       {/* Header */}
       <div className="header">
         <SearchBar />

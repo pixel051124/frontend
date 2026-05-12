@@ -79,7 +79,7 @@ export default function Pendaftaran({ onBack, onKirim, isUpgrade }) {
   };
 
   return (
-    <div className="pendaftaran-shell">
+    <div>
       {/* Header */}
       <div className="pend-header">
         <button className="back-btn" onClick={onBack}>

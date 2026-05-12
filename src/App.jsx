@@ -340,11 +340,7 @@ export default function App() {
 
 const styles = {
   container: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     minHeight: "100vh",
-    background: "#e8e8e8",
-    overflow: "hidden",
+    backgroundColor: "#ffffff",   
   },
 };

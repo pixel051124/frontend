@@ -4,7 +4,7 @@ import "./FotoBuktiPembayaran.css";
 // Ganti props 'paket' menjadi 'data'
 export default function FotoBuktiPembayaran({ onKembali, data }) {
   return (
-    <div className="fbp-shell">
+    <div>
       <h2 className="fbp-page-title">Bukti Pembayaran</h2>
       
       <div className="fbp-card">

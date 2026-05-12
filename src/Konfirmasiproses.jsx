@@ -3,7 +3,7 @@ import iconWarning from "./assets/icon-laporan.png";
 
 export default function KonfirmasiProses({ onKembali }) {
   return (
-    <div className="kproses-shell">
+    <div>
       {/* Header */}
       <div className="kproses-header">
         <h2>Pembayaran</h2>

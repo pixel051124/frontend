@@ -12,7 +12,7 @@ export default function KonfirmasiLaporan({ onKembali }) {
   });
 
   return (
-    <div className="kl-shell">
+    <div>
       {/* Header */}
       <div className="kl-header">
         <h2>Pembayaran</h2>

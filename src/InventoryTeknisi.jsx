@@ -64,7 +64,7 @@ const handleUpdate = () => {
 };
 
   return (
-    <div className="inv-shell">
+    <div>
       {/* Header */}
       <div className="inv-header">
         <button className="inv-back-btn" onClick={onBack}>

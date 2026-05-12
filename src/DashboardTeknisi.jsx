@@ -60,7 +60,7 @@ export default function DashboardTeknisi({
 }) {
 
   return (
-  <div className="dt-shell">
+  <div>
     <div className="dt-header">
       <SearchBar />
       <div className="dt-greeting">

@@ -110,15 +110,3 @@ code {
   background: var(--code-bg);
 }
 
-@media (max-width: 768px) {
-  .login-shell {
-    width: 100vw !important;         
-    height: 100vh !important;        
-    max-width: 100% !important;      
-    max-height: 100% !important;    
-    border: none !important;         
-    border-radius: 0 !important;     
-    box-shadow: none !important;     
-    margin: 0 !important;
-  }
-}

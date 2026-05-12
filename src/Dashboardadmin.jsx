@@ -82,7 +82,7 @@ export default function DashboardAdmin({
   }, [adminName]);
 
   return (
-    <div className="da-shell">
+    <div>
       {/* Header */}
       <div className="da-header">
         <SearchBar />

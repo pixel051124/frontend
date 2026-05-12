@@ -59,7 +59,7 @@ export default function DashboardAktif({
   onBayar,
 }) {
   return (
-    <div className="dak-shell">
+    <div>
       {/* Header */}
       <div className="dak-header">
         <SearchBar />

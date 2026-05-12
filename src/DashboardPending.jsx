@@ -71,7 +71,7 @@ export default function DashboardPending({
   onSedangDiproses
 }) {
   return (
-    <div className="dp-shell">
+    <div>
       {/* Header */}
       <div className="dp-header">
         <SearchBar />

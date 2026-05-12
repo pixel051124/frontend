@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 // ── CARD ─────────────────────────────────────────
 function LaporanCard({ item, onKirimTeknisi, onViewFoto }) {
   return (
-    <div className="ll-card">
+    <div>
       <div className="ll-row">
         <span className="ll-label">Nama</span>
         <span className="ll-sep">:</span>

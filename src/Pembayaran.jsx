@@ -44,7 +44,7 @@ formData.append("nama", user?.name || "");
   }
 };
   return (
-    <div className="pay-shell">
+    <div>
       {/* Header */}
       <div className="pay-header">
         <button className="pay-back-btn" onClick={onBack}>

@@ -12,7 +12,7 @@ export default function KonfirmasiData({ onKembali }) {
   });
 
   return (
-    <div className="konfirmasi-shell">
+    <div>
       {/* Header */}
       <div className="konfirmasi-header">
         <h2>Pendaftaran</h2>
