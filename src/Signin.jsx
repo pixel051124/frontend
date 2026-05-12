@@ -52,12 +52,13 @@ export default function SignIn({ onGoLogin }) {
   };
 
   return (
-    <div>
+    <div className="login-shell">
       <div className="login-card">
 
         <img src={logoConnecta} alt="Connecta" className="login-logo" />
         <h2 className="login-title">CUSTOMER SIGN IN</h2>
 
+        {/* 🔥 ERROR BOX UI */}
         {error && (
           <div className="error-box">
             ⚠ {error}
