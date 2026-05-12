@@ -145,7 +145,7 @@ export default function Inventory({ onBack }) {
   );
 
   return (
-    <div>
+    <div className="da-container">
 
       {/* HEADER */}
       <div className="inv-header">

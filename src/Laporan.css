@@ -187,6 +187,15 @@
   background: var(--bg-app);
 }
 
+.da-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #7b9ef5; 
+  box-sizing: border-box;
+  padding-bottom: 32px;
+  font-family: var(--font-body);
+}
+
 .lap-btn-kirim {
   width: 100%;
   background: linear-gradient(135deg, #4a6ed4, var(--blue-primary));

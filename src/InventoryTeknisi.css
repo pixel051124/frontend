@@ -275,6 +275,15 @@
   transform: translateY(-1px);
 }
 
+.da-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #7b9ef5; 
+  box-sizing: border-box;
+  padding-bottom: 32px;
+  font-family: var(--font-body);
+}
+
 .inv-btn-update:active { transform: translateY(0); }
 
 /* ── Animation ── */

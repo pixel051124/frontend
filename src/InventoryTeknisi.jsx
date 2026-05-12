@@ -64,7 +64,7 @@ const handleUpdate = () => {
 };
 
   return (
-    <div>
+    <div className="da-container">
       {/* Header */}
       <div className="inv-header">
         <button className="inv-back-btn" onClick={onBack}>

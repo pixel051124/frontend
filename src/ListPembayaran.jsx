@@ -68,6 +68,7 @@ export default function ListPembayaran({ onBack, onViewBukti }) {
 
   const [items, setItems] = useState([]);
 
+  // GET DATA DARI BACKEND
   useEffect(() => {
     fetch("https://backend-appv2-production.up.railway.app/api/pembayaran")
       .then(res => res.json())
@@ -89,7 +90,7 @@ export default function ListPembayaran({ onBack, onViewBukti }) {
   };
 
   return (
-    <div>
+    <div className="da-container">
 
       {/* Header */}
       <div className="lpb-header">

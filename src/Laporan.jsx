@@ -42,7 +42,7 @@ export default function Laporan({ onBack, onKirim }) {
 };
 
   return (
-    <div>
+    <div className="da-container">
       {/* Header */}
       <div className="lap-header">
         <button className="lap-back-btn" onClick={onBack}>

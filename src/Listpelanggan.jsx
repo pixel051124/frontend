@@ -44,7 +44,7 @@ export default function ListPelanggan({ onBack }) {
 };
 
   return (
-    <div>
+    <div className="da-container">
       {/* Header */}
       <div className="lp-header">
         <button className="lp-back-btn" onClick={onBack}>
