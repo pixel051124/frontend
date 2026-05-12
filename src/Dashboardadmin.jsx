@@ -82,8 +82,7 @@ export default function DashboardAdmin({
   }, [adminName]);
 
   return (
-    <div>
-      {/* Header */}
+    <div className="da-container">
       <div className="da-header">
         <SearchBar />
         <div className="da-greeting">
