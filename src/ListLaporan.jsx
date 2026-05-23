@@ -1,7 +1,6 @@
 import "./ListLaporan.css";
 import { useEffect, useState } from "react";
 
-// ── CARD ─────────────────────────────────────────
 function LaporanCard({ item, onKirimTeknisi, onViewFoto }) {
   return (
     <div className="ll-card">

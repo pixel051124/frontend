@@ -31,13 +31,18 @@ formData.append("nama", user?.name || "");
 
   try {
     const res = await fetch("https://backend-appv2-production.up.railway.app/api/pembayaran", {
-      method: "POST",
-      body: formData,
-    });
+  method: "POST",
+  body: formData,
+});
 
-    if (!res.ok) throw new Error("Gagal kirim pembayaran");
+const result = await res.json(); // Ambil response json dari Laravel
 
-    onKirim(); // pindah ke konfirmasi
+if (!res.ok || result.success === false) {
+  // Jika Laravel kirim error validasi atau error database, tangkap di sini
+  throw new Error(result.error || result.message || "Gagal kirim pembayaran");
+}
+
+onKirim(); // Hanya pindah halaman jika sukses total
   } catch (err) {
     console.error(err);
     alert("Gagal kirim pembayaran");
