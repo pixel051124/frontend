@@ -23,6 +23,7 @@
   align-items: center;
   padding: 28px 20px 40px;
   box-sizing: border-box;
+  margin: 0 auto; 
 }
 
 .fbp-page-title {
@@ -35,7 +36,6 @@
   flex-shrink: 0;
 }
 
-/* ── Card dengan Animasi ── */
 .fbp-card {
   background: var(--white);
   border-radius: 24px;
@@ -63,7 +63,6 @@
   margin: 0 0 20px 0;
 }
 
-/* ── Area Gambar (Clean Look) ── */
 .fbp-image-placeholder {
   width: 100%;
   height: 380px;
@@ -77,7 +76,6 @@
   overflow: hidden;
 }
 
-/* Biar pas ada tag img nanti langsung rapi */
 .fbp-image-placeholder img {
   width: 100%;
   height: 100%;
@@ -92,7 +90,17 @@
   padding: 0 8px;
 }
 
-/* ── Tombol Kembali ── */
+.fbp-alamat-text {
+  display: block;
+  margin-top: 4px;
+  color: #4b5563;
+  font-style: italic;
+  background-color: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 8px;
+  word-break: break-word;
+}
+
 .fbp-btn-kembali {
   width: 100%;
   background: linear-gradient(135deg, #4a6ed4, var(--blue-primary));
