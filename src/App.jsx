@@ -23,6 +23,7 @@ import FotoLaporan from "./FotoLaporan";
 import DashboardTeknisi from "./DashboardTeknisi";
 import TugasTeknisi from "./TugasTeknisi";
 import InventoryTeknisi from "./InventoryTeknisi";
+import FotoKtp from "./FotoKtp";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -35,6 +36,7 @@ export default function App() {
   const [pembayaranTerpilih, setPembayaranTerpilih] = useState(null);
   const [laporanTerpilih, setLaporanTerpilih] = useState(null);
   const [isUpgrade, setIsUpgrade] = useState(false);
+  const [pelangganTerpilih, setPelangganTerpilih] = useState(null);
 
 
   if (showSplash) {
@@ -227,9 +229,22 @@ export default function App() {
         />
       )}
 
+      {/* Ganti bagian listPelanggan lama dengan ini */}
       {halaman === "listPelanggan" && (
         <ListPelanggan
           onBack={() => setHalaman("dashboardAdmin")}
+          onViewKtp={(item) => {
+            setPelangganTerpilih(item);
+            setHalaman("fotoKtp"); // Pindah ke halaman fotoKtp
+          }}
+        />
+      )}
+
+      {/* Tambahkan rute baru ini di bawah rute fotoBuktiPembayaran */}
+      {halaman === "fotoKtp" && (
+        <FotoKtp
+          onKembali={() => setHalaman("listPelanggan")}
+          data={pelangganTerpilih}
         />
       )}
 
