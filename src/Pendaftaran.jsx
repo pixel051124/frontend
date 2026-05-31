@@ -44,7 +44,7 @@ const handleKirim = async () => {
     return;
   }
 
-  // PERBAIKAN: Gunakan FormData agar file fisik gambar ikut terkirim ke server Railway
+  // PERBAIKAN: Gunakan FormData agar file fisik KTP ikut terkirim ke server Railway
   const formData = new FormData();
   formData.append("user_id", user?.id || "");
   formData.append("paket_id", selectedPaket.id);
@@ -57,7 +57,6 @@ const handleKirim = async () => {
   try {
     const res = await fetch("https://backend-appv2-production.up.railway.app/api/pendaftaran", {
       method: "POST",
-      // CATATAN: Jangan tulis header Content-Type jika memakai FormData, browser akan mengaturnya secara otomatis
       body: formData, 
     });
 
