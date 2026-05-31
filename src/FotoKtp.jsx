@@ -14,6 +14,12 @@ export default function FotoKtp({ onKembali, data }) {
             <img
               src={`https://backend-appv2-production.up.railway.app/storage/${data.foto_ktp}`}
               alt="Foto KTP"
+              style={{
+              width: "100%",
+              maxWidth: "300px",
+              borderRadius: "10px",
+              objectFit: "cover"
+            }}
             />
           ) : (
             <span style={{ color: "#aaa", fontSize: "13px" }}>Tidak ada foto KTP</span>
