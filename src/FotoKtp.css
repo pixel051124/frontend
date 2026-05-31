@@ -23,6 +23,7 @@
   align-items: center;
   padding: 28px 20px 40px;
   box-sizing: border-box;
+  margin: 0 auto; /* Supaya posisi mockup ke tengah layar */
 }
 
 .fbp-page-title {
