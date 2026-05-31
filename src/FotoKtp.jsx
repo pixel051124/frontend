@@ -12,8 +12,13 @@ export default function FotoKtp({ onKembali, data }) {
         <div className="fktp-image-placeholder">
           {data?.foto_ktp ? (
             <img
-              src={`https://backend-appv2-production.up.railway.app/storage/${data.foto_ktp}`}
+              src={`https://backend-appv2-production.up.railway.app/storage/${data?.foto_ktp}`}
               alt="Foto KTP Pelanggan"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "contain"
+              }}
             />
           ) : (
             <span className="fktp-no-image">Tidak ada foto KTP</span>
