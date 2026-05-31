@@ -8,8 +8,8 @@
   --font-body: 'DM Sans', sans-serif;
 }
 
-/* Container utama melebar normal mengikuti layout admin */
-.fktp-container {
+/* Wrapper utama pembungkus halaman (Full lebar) */
+.fktp-main-wrapper {
   width: 100%;
   padding: 20px;
   box-sizing: border-box;
@@ -18,25 +18,24 @@
 
 .fktp-page-title {
   font-family: var(--font-display);
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 24px;
+  font-weight: 800;
   color: var(--text-dark);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
-/* Card yang responsif dan fleksibel */
+/* Card kontainer yang adaptif */
 .fktp-card {
   background: var(--white);
-  border-radius: 16px;
-  padding: 24px;
+  border-radius: 24px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
   border: 1px solid #eef2f6;
   width: 100%;
-  max-width: 600px; /* Membatasi agar di monitor besar tidak terlalu melar */
+  max-width: 650px; /* Supaya pas di tengah monitor desktop */
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -49,63 +48,72 @@
   margin: 0 0 20px 0;
 }
 
-/* Area box foto KTP */
+/* Tempat Foto KTP Melebar Setinggi FotoLaporan */
 .fktp-image-placeholder {
   width: 100%;
-  height: 350px;
+  height: 440px; /* Tinggi disesuaikan mirip FotoLaporan */
   background: #f4f6fc;
   border: 2px dashed #c5d4f9;
   border-radius: 16px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
+/* Gambar KTP di dalamnya */
 .fktp-image-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Menggunakan contain supaya seluruh bentuk KTP terlihat utuh */
+  object-fit: contain; /* Memastikan file KTP dari Railway terlihat utuh */
+}
+
+.fktp-no-image {
+  color: #aaa;
+  font-size: 14px;
 }
 
 .fktp-desc {
   font-size: 14px;
   color: #666;
   line-height: 1.6;
-  margin: 0 0 24px 0;
-  width: 100%;
+  margin: 0 0 12px 0;
+  text-align: center;
 }
 
-/* Styling teks alamat pendaftaran */
-.fktp-alamat-text {
-  display: inline-block;
-  margin-top: 8px;
+/* Box Alamat */
+.fktp-alamat-box {
+  width: 100%;
+  font-size: 14px;
   color: #374151;
-  font-weight: 500;
   background-color: #f3f4f6;
-  padding: 8px 14px;
+  padding: 12px 16px;
   border-radius: 8px;
+  margin-bottom: 24px;
+  border-left: 4px solid var(--blue-primary);
+  text-align: left;
+  box-sizing: border-box;
   word-break: break-word;
 }
 
-/* Tombol kembali yang menyesuaikan card */
+/* Tombol Kembali */
 .fktp-btn-kembali {
   width: 100%;
   background: linear-gradient(135deg, #4a6ed4, var(--blue-primary));
   color: white;
   border: none;
-  border-radius: 12px;
-  padding: 14px;
+  border-radius: 14px;
+  padding: 15px;
   font-family: var(--font-display);
   font-size: 15px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(91,127,232,0.3);
+  box-shadow: 0 6px 20px rgba(91,127,232,0.3);
   transition: all 0.2s;
 }
 
 .fktp-btn-kembali:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 16px rgba(91,127,232,0.4);
+  box-shadow: 0 8px 24px rgba(91,127,232,0.4);
 }
