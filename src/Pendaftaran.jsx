@@ -30,53 +30,53 @@ export default function Pendaftaran({ onBack, onKirim, isUpgrade }) {
   };
 
   // ── HANDLE KIRIM ──────────────────────────────
-  const handleKirim = async () => {
-    if (!selectedPaket) return alert("Pilih paket terlebih dahulu!");
-    if (!fullName) return alert("Isi Full Name terlebih dahulu!");
-    if (!phone) return alert("Isi Phone Number terlebih dahulu!");
-    if (!address) return alert("Isi Address terlebih dahulu!");
+const handleKirim = async () => {
+  if (!selectedPaket) {
+    alert("Please select a package first!");
+    return;
+  }
+  if (!fullName || !phone || !address) {
+    alert("Please fill in all fields!");
+    return;
+  }
+  if (!file) {
+    alert("Please upload your ID Card photo!");
+    return;
+  }
 
-    if (!user) {
-      alert("User tidak ditemukan, silakan login ulang!");
+  // PERBAIKAN: Gunakan FormData agar file fisik gambar ikut terkirim ke server Railway
+  const formData = new FormData();
+  formData.append("user_id", user?.id || "");
+  formData.append("paket_id", selectedPaket.id);
+  formData.append("nama_lengkap", fullName);
+  formData.append("no_hp", phone);
+  formData.append("alamat", address);
+  formData.append("foto_ktp", file); // <--- Sekarang objek file fisik gambarnya ikut dikirim
+  formData.append("tipe", isUpgrade ? "upgrade" : "baru");
+
+  try {
+    const res = await fetch("https://backend-appv2-production.up.railway.app/api/pendaftaran", {
+      method: "POST",
+      // CATATAN: Jangan tulis header Content-Type jika memakai FormData, browser akan mengaturnya secara otomatis
+      body: formData, 
+    });
+
+    const data = await res.json();
+    console.log(data);
+
+    if (!res.ok) {
+      alert(data.message || "Gagal melakukan pendaftaran!");
       return;
     }
 
-    try {
-      const res = await fetch("https://backend-appv2-production.up.railway.app/api/pendaftaran", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          user_id: user.id, 
-          paket_id: selectedPaket.id,
-          nama_lengkap: fullName,
-          no_hp: phone,
-          alamat: address, // optional tapi lebih lengkap
-          foto_ktp: file ? file.name : null,
+    alert("Pendaftaran berhasil dikirim!");
+    if (onKirim) onKirim();
 
-          tipe: isUpgrade ? "upgrade" : "baru",
-        }),
-      });
-
-      const data = await res.json();
-
-      console.log("STATUS:", res.status);
-      console.log("RESPONSE:", data);
-
-      if (!res.ok) {
-        alert(data.message || "Gagal kirim data!");
-        return;
-      }
-
-      // pindah ke halaman berikutnya
-      onKirim(selectedPaket);
-
-    } catch (error) {
-      console.error("ERROR:", error);
-      alert("Terjadi error koneksi!");
-    }
-  };
+  } catch (err) {
+    console.error(err);
+    alert("Error koneksi ke server!");
+  }
+};
 
   return (
     <div>
